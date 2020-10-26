@@ -30,13 +30,11 @@ setInterval(function(){
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     var blockTop = parseInt(window.getComputedStyle(block).getPropertyValue("top"));
     if(characterLeft==blockLeft && blockTop<500 && blockTop>300){
-        alert("Game over. Score: " + counter);
+        alert("Game over. Score: " + counter)
+		console.log("Game over Try again")
         block.style.animation = "none";
     }
 },1);
-
-
-
 
 document.getElementById("right").addEventListener("touchstart", moveRight);
 document.getElementById("left").addEventListener("touchstart", moveLeft);
